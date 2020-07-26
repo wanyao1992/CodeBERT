@@ -20,7 +20,6 @@ import logging
 import os
 import random
 
-
 import numpy as np
 import torch
 from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler,
@@ -34,8 +33,10 @@ from transformers import (WEIGHTS_NAME, get_linear_schedule_with_warmup, AdamW,
                           RobertaForSequenceClassification,
                           RobertaTokenizer)
 
-from utils import (compute_metrics, convert_examples_to_features,
-                        output_modes, processors)
+from codesearch.utils import (
+    compute_metrics, convert_examples_to_features,
+    output_modes, processors
+)
 
 logger = logging.getLogger(__name__)
 
